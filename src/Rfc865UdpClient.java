@@ -24,7 +24,7 @@ public class Rfc865UdpClient {
         DatagramSocket socket;
         try {
             socket = new DatagramSocket();
-            socket.connect(serverAddr, 30017);
+            socket.connect(serverAddr, 17);
         } catch (SocketException e) {
             System.out.println("Error: " + e.getMessage());
             return;
@@ -47,7 +47,6 @@ public class Rfc865UdpClient {
             // Convert the buffer to a string
             String message = new String(reply.getData());
             System.out.println("Result: " + message);
-            // ...
         } catch (IOException e) {
         }
     }
